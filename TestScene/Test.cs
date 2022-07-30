@@ -4,79 +4,82 @@ using UnityEngine;
 using TMPro;
 using SSM;
 
-public class Test : MonoBehaviour
+namespace SimpleStateMachineTestScene
 {
-    private SSMController sSMController;
-    [SerializeField] TextMeshProUGUI text;
-
-    private void Start()
+    public class Test : MonoBehaviour
     {
-        var holdState1 = new SSMState(
-            onEnter: () =>
-            {
-                text.text = "State 1";
-            },
-            onRun: () =>
-            {
+        private SSMController sSMController;
+        [SerializeField] TextMeshProUGUI text;
 
-            },
-            onExit: () =>
-            {
+        private void Start()
+        {
+            var holdState1 = new SSMState(
+                onEnter: () =>
+                {
+                    text.text = "State 1";
+                },
+                onRun: () =>
+                {
 
-            });
-        var holdState2 = new SSMState(
-            onEnter: () =>
-            {
-                text.text = "State 2";
-            },
-            onRun: () =>
-            {
+                },
+                onExit: () =>
+                {
 
-            },
-            onExit: () =>
-            {
+                });
+            var holdState2 = new SSMState(
+                onEnter: () =>
+                {
+                    text.text = "State 2";
+                },
+                onRun: () =>
+                {
 
-            });
-        var holdState3 = new SSMState(
-            onEnter: () =>
-            {
-                text.text = "State 3";
-            },
-            onRun: () =>
-            {
-                
-            },
-            onExit: () =>
-            {
+                },
+                onExit: () =>
+                {
 
-            });
+                });
+            var holdState3 = new SSMState(
+                onEnter: () =>
+                {
+                    text.text = "State 3";
+                },
+                onRun: () =>
+                {
 
-        sSMController = new SSMController();
-        
-        sSMController.AddState("state1", holdState1);
-        sSMController.AddState("state2", holdState2);
-        sSMController.AddState("state3", holdState3);
+                },
+                onExit: () =>
+                {
 
-        sSMController.Initialized("state1");
-    }
+                });
 
-    private void Update()
-    {
-        sSMController.Run();
-    }
+            sSMController = new SSMController();
 
-    public void StateChange1()
-    {
-        sSMController.ChangeState("state1");
-    }
+            sSMController.AddState("state1", holdState1);
+            sSMController.AddState("state2", holdState2);
+            sSMController.AddState("state3", holdState3);
 
-    public void StateChange2()
-    {
-        sSMController.ChangeState("state2");
-    }
+            sSMController.Initialized("state1");
+        }
 
-    public void StateChange3()
-    {
-        sSMController.ChangeState("state3");
+        private void Update()
+        {
+            sSMController.Run();
+        }
+
+        public void StateChange1()
+        {
+            sSMController.ChangeState("state1");
+        }
+
+        public void StateChange2()
+        {
+            sSMController.ChangeState("state2");
+        }
+
+        public void StateChange3()
+        {
+            sSMController.ChangeState("state3");
+        }
     }
 }
