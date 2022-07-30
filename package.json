@@ -3,5 +3,12 @@
   "version": "0.1.0",
   "displayName": "SimpleStateMachine",
   "unity": "2021.3",
-  "description": "description."
+  "dependencies": {
+  },
+  "author": {
+    "name": "Daiki Kobayashi",
+    "url": "https://github.com/DaikiKobayashi"
+  },
+  "type": "tool",
+  "description": "Library for Simple StateMachine."
 }
