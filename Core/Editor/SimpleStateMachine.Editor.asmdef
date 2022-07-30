@@ -1,8 +1,12 @@
 {
-    "name": "SimpleStateMachine",
+    "name": "SimpleStateMachine.Editor",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [],
+    "references": [
+        "GUID:468f07cbfbe72294ca3dfe67e52dec33"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

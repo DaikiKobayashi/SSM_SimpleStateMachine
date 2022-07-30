@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SSM
+namespace SimpleStateMachine
 {
     public class SSMController
     {

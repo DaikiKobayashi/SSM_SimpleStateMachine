@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Action = System.Action;
 
-namespace SSM
+namespace SimpleStateMachine
 {
     public class SSMState : IState
     {
